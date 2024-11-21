@@ -10,12 +10,13 @@ while True:
       name = input("Enter the contact name: ")
       phone = input("Enter the mobile number: ")
       contact[name] = phone
+      print("Contact is added to the contact book")
    elif(choice == 2):
       search_name = input("Enter the name to serach: ")
       if(search_name in contact):
          print(search_name, "s contact number is ", contact[search_name])
       else:
-         print("Name  found in contact book")
+         print("Name is not found in contact book")
    elif(choice == 3):
       if(not contact):
          print("Empty contact book")
@@ -26,7 +27,7 @@ while True:
       if(edit_contact in contact):
          phone = input("Enter mobile number: ")
          contact[edit_contact] = phone
-         print("contact updated")
+         print("Contact updated!")
          display_contact()
       else:
          print("Name is not found in contact book")
